@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+
+    <title>Formulario Solicitud</title>
+
+    <style>
+        .negrita {
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <div class="container-fluid pb-2 bg-primary">
+        <div class="row">
+            <div class="col-md-6 bg-primary">
+                <h1 class="text-white p-4">PRE15NA</h1>
+            </div>
+            <div class="col-md-4 bg-primary pt-3">
+                <h3>Solicitud-Contrato</h3>
+                <p>Los datos asentados en la presente se obtuvieron mediante entrevista con el solicitante del credito
+                </p>
+            </div>
+            <!-- FORM FOLIO -->
+            <div class="col-md-2 bg-primary">
+                <div class="card bg-black">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center bg-dark">
+                            <h5 class="text-light">FOLIO</h5>
+                        </li>
+                        <form class="form-row mb-2">
+                            <div class="col">
+                                <label for="solicitud" class="ml-3">Solicitud: </label>
+                                <input type="text" class="form-control" placeholder="N°" id="sc_nro_folio">
+                            </div>
+                            <div class="col">
+                                <label for="solicitud" class="ml-3">Cliente: </label>
+                                <input type="text" class="form-control" placeholder="N°" id="sc_nro_cliente">
+                            </div>
+                        </form>
+                    </ul>
+                </div>
+            </div>
+            <!-- FIN FORM FOLIO -->
+        </div>
+    </div>
+    <!-- FIN CABECERA -->
+
+    <!-- FORMULARIO SOLICITUD-CONTRATO -->
+
+    <div class="container-fluid pb-4 pt-4 " style="background-color: honeydew;">
+        <div class="card border-info bg-light">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <p class="mt-2 mr-2 negrita">Producto</p>
+                        <input type="text" size="10" maxlength="10" class="form-control mt-1 mr-1" id="sc_producto" placeholder="N°" required>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="mt-2 mr-2 negrita">Plazo:</p>
+                        <input type="text" size="2" maxlength="2" class="form-control mt-1 mr-1" id="sc_plazo" placeholder="N°" required>
+                    </div>
+                    <div class="col-md-4 ">
+                        <p class="mt-2 mr-2 negrita">Dependencia</p>
+                        <input type="text" class="form-control" name="sc_dependencia" id="sc_dependencia" placeholder="Dependencia" required>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="mt-2 mr-2 negrita">Monto Maximo o Linea de Credito</p>
+                        <div class="input-group">
+                            <input type="text" value="$ " class="form-control col-md-1" readonly>
+                            <input type="text" class="form-control col-md-4" name="sc_montoMax" id="sc_montoMax" placeholder="Moneda Nacional" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <p class="mt-2 mr-2 negrita">Sucursal</p>
+                        <input type="text" class="form-control" id="sc_sucursal" placeholder="Sucursal" required>
+                    </div>
+
+                    <div class="col-md-6 ">
+                        <p class="mt-2 mr-2 negrita">Referencia</p>
+                        <div class="input-group ">
+                            <input type="text" class="form-control col-md-6" id="sc_referencia1" placeholder="Referencia" required>
+                            <p> __ </p>
+                            <input type="text" maxlength="1" size="1" class="form-control col-md-1" id="sc_referencia2">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="mt-2 mr-2 negrita">Monto Total a Pagar:</p>
+                        <div class="input-group">
+                            <input type="text" value="$ " class="form-control col-md-1" readonly>
+                            <input type="text" class="form-control col-md-4" id="sc_montoTotal" placeholder="Moneda Nacional" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <p class="mt-2 mr-2 negrita">Código de promotor</p>
+                        <input type="text" class="form-control col-md-9" id="sc_cod_promotor" placeholder="Código de Promotor" required>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mt-2 mr-2 negrita">Nombre de Promotor</p>
+                        <input type="text" class="form-control" id="sc_name_promotor" placeholder="Nombre de Promotor" required>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="mt-2 mr-2 negrita">Parcialidades:</p>
+                        <div class="input-group">
+                            <input type="text" value="$ " class="form-control col-md-1" readonly>
+                            <input type="text" class="form-control col-md-4" id="sc_parcialidades" placeholder="Moneda Nacional" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIN FORMULARIO SOLICITUD CABECERA -->
+
+    <!-- FORMULARIO SOLICITANTE -->
+    <div class="container-fluid pt-4 pb-4" style="background-color: honeydew;">
+        <div class="row">
+            <div class="col-md-12 ">
+                <p>Datos del solicitante</p>
+            </div>
+            <div class="col-md-12">
+                <form class="form-row">
+                    <div class="col-md-3 mb-2">
+                        <input type="text" class="form-control" placeholder="Nombre 1" id="sol_nombre1" required>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <input type="text" class="form-control" placeholder="Nombre 2" id="sol_nombre2">
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <input type="text" class="form-control" placeholder="Apellido Paterno" id="sol_apellido1" required>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <input type="text" class="form-control" placeholder="Apellido Materno" id="sol_apellido2">
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <input type="text" maxlength="1" size="1" class="form-control" placeholder="Género" id="sol_genero" required>
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <input type="text" class="form-control" placeholder="Nacionalida" id="sol_nacionalidad" required>
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <input type="text" class="form-control" placeholder="País nacimiento" id="sol_pais_nacimiento" required>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <input type="text" class="form-control" placeholder="Estado Civil" id="sol_estado_civil" required>
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <input type="date" class="form-control" id="fecha_nacimiento">
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <input type="text" class="form-control" placeholder="Entidad Federativa de Nacimiento" id="sol_lugar_nacimiento" required>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <input type="text" class="form-control" placeholder="Tele. Celular (10 Dígitos)" id="sol_celular" required>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <input type="text" class="form-control" placeholder="FIEL(cuando cuente con ella)" id="sol_fiel" required>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <input type="text" class="form-control" placeholder="RFC (con homoclave)" id="sol_rfc" required>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <input type="text" class="form-control" placeholder="CURP" id="sol_curp" required>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <input type="text" class="form-control" placeholder="Número de Nómina" id="sol_celular" required>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <input type="text" class="form-control" placeholder="Tiene o ha tenido créditos con PRE15NA?" id="sol_credito_pre15na" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- FIN formulario solicitante -->
+
+    <!-- formulario CONYUGE -->
+    <div class="container-fluid pb-4" style="background-color: honeydew;">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-danger">Cónyuge:</p>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="con_nombre1" id="con_nombre1" placeholder="Nombre 1" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="con_nombre2" id="con_nombre2" placeholder="Nombre 2">
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="con_apellido1" id="con_apellido1" placeholder="Apellido Paterno" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="con_apellido2" id="con_apellido2" placeholder="Apellido Materno" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="con_fnacimiento" id="con_fnacimiento" placeholder="Fecha Nacimiento">
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="con_nacionalidad" id="con_nacionalidad" placeholder="Naciionalidad" required>
+            </div>
+        </div>
+    </div>
+    <!-- FIN formulario CONYUGE -->
+
+    <!-- FORMULARIO DOMICILIO -->
+    <div class="container-fluid pb-4" style="background-color: honeydew;">
+
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-danger">Domicilio:</p>
+            </div>
+            <div class="col-md-3 mb-2">
+                <input type="text" class="form-control" name="dom_tipo_vivienda" id="dom_tipo_vivienda" placeholder="Tipo de Vivienda" required>
+            </div>
+            <div class="col-md-3 mb-2">
+                <input type="text" class="form-control" name="dom_calle" id="dom_calle" placeholder="Calle" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="dom_exterior" id="dom_exterior" placeholder="Exterior" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="dom_interior" id="dom_interior" placeholder="Interior" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="dom_colonia" id="dom_colonia" placeholder="Colonia" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 mb-2">
+                <input type="text" class="form-control" name="dom_cruzamientos" id="dom_cruzamiento" placeholder="Cruzamientos" required>
+            </div>
+            <div class="col-md-1 mb-2">
+                <input type="text" class="form-control" name="dom_cp" id="dom_cp" placeholder="C.P." required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="dom_ciudad" id="dom_ciudad" placeholder="Ciudad" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="dom_estado" id="dom_estado" placeholder="Estado" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="dom_pais" id="dom_pais" placeholder="País" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="dom_arraigo_year" id="dom_arraigo_year" placeholder="Arraigos Años" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="dom_arraigo_moth" id="dom_arraigo_moth" placeholder="Arraigo Meses" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" name="dom_tel_casa" id="dom_tel_casa" placeholder="Tel. Casa (10 Dígitos)" required>
+            </div>
+            <div class="col-md-3 mb-2">
+                <input type="text" class="form-control" name="dom_correo" id="dom_correo" placeholder="Correo" required>
+            </div>
+            <div class="col-md-3 mb-2">
+                <input type="text" class="form-control" name="dom_horario" id="dom_horario" placeholder="Horario en que podemos locarlizarlo"
+                    required>
+            </div>
+        </div>
+    </div>
+    <!-- FIN Formulario Domicilio -->
+
+    <!-- Formulario EMPLEO -->
+    <div class="container-fluid" style="background-color: honeydew;">
+        <div class="row">
+
+            <div class="col-md-1">
+                <p>Empleo: </p>
+            </div>
+            <div class="col-md-10 justify-content-center">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="emp_confianza" value="confianza">
+                    <label class="form-check-label" for="inlineCheckbox1">Confianza</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="emp_base" value="base">
+                    <label class="form-check-label" for="inlineCheckbox2">Base</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="emp_eventual" value="eventual">
+                    <label class="form-check-label" for="inlineCheckbox3">Eventual</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="emp_jubiladoPensionado" value="jubiladoPensionado">
+                    <label class="form-check-label" for="inlineCheckbox3">Jubilado o Pensionado</label>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <form class="form-row">
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" id="emp_profesion" placeholder="Ocupación, profesión, actividad o giro del negocio"
+                            required>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="emp_nombre_centro_trabajo" placeholder="Nombre de Centro del Trabajo" required>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <input type="text" class="form-control" id="emp_ingreso_mensual" placeholder="Ingreso Neto Mensual" required>
+                    </div>
+                    <div class="col-md-5 mb-2">
+                        <input type="text" class="form-control" id="emp_puesto" placeholder="Puesto" required>
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <input type="text" class="form-control" id="emp_time_work_year" placeholder="Antig. Años" required>
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <input type="text" class="form-control" id="emp_time_work_moth" placeholder="Antig. meses" required>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <input type="text" class="form-control" id="emp_telefono_empleo" placeholder="Teléfono Empleo(10 Dígitos)" required>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <input type="text" class="form-control" id="emp_telefono_extension" placeholder="Extension" required>
+                    </div>
+                    <div class="col-md-7 mb-2">
+                        <input type="text" class="form-control" id="emp_calle" placeholder="Calle y Referencia" required>
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <input type="text" class="form-control" id="emp_exterior" placeholder="Exterior" required>
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <input type="text" class="form-control" id="emp_interior" placeholder="Interior" required>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <input type="text" class="form-control" id="emp_colonia" placeholder="Colonia" required>
+                    </div>
+                    <div class="col-md-5 mb-2">
+                        <input type="text" class="form-control" id="emp_cruzamiento" placeholder="Cruzamientos" required>
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <input type="text" class="form-control" id="emp_cp" placeholder="C.P." required>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <input type="text" class="form-control" id="emp_ciudad" placeholder="Ciudad" required>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <input type="text" class="form-control" id="emp_estado" placeholder="Estado" required>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <input type="text" class="form-control" id="emp_pais" placeholder="País" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIN Formulario EMPLEO -->
+    <hr>
+    <!-- Formulario REFERENCIAS PERSONALES -->
+    <div class="container-fluid pb-4" style="background-color: honeydew;">
+        <div class="row">
+            <div class="col-md-5">
+                <p>Referencias Personales:</p>
+            </div>
+            <div class="col-md-2">
+                <p>Telefono(10 Dígitos)</p>
+            </div>
+            <div class="col-md-3">
+                <p>Relación</p>
+            </div>
+            <div class="col-md-2">
+                Tiempo Conocerlo
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 mb-2">
+                <input type="text" class="form-control" id="ref_nombres1" placeholder="Nombres y Apellidos" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" id="ref_telefono1" placeholder="Telégonos (10 Dígitos)" required>
+            </div>
+            <div class="col-md-3 mb-2">
+                <input type="text" class="form-control" id="ref_relacion1" placeholder="Relación" required>
+            </div>
+            <div class="col-md-2 mb-2">
+                <input type="text" class="form-control" id="ref_tiempo_conocido1" placeholder="Tiempo Conocerlo" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="ref_nombres2" placeholder="Nombres y Apellidos">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" id="ref_telefono2" placeholder="Telégonos (10 Dígitos)">
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" id="ref_relacion2" placeholder="Relación">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" id="ref_tiempo_conocido2" placeholder="Tiempo Conocerlo">
+            </div>
+        </div>
+    </div>
+    <!-- FIN Formulario REFERENCIAS PERSONALES -->
+
+    <!-- Formulario DISPOSICION DEL IMPORTE DEL CREDITO -->
+    <div class="container-fluid pb-2" style="background-color: honeydew;">
+        <div class="row">
+            <div class="col-md-3">
+                <p>Disposición del Importe del Crédito</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 justify-content-center">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="cred_orden_pago" value="orden de pago">
+                    <label class="form-check-label" for="inlineCheckbox1">Orden de pago</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="cred_cheque" value="cheque">
+                    <label class="form-check-label" for="inlineCheckbox2">Cheque</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="cred_transf_elect" value="transferencia electronica">
+                    <label class="form-check-label" for="inlineCheckbox3">Transferencia Electronica</label>
+                </div>
+            </div>
+
+            <div class="input-group mb-3 col-md-4">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button" id="cred_clave[0]">0</button>
+                    <button class="btn btn-outline-secondary" type="button" id="cred_clave[1]">1</button>
+                    <button class="btn btn-outline-secondary" type="button" id="cred_clave[2]">2</button>
+                    <button class="btn btn-outline-secondary" type="button" id="cred_clave[3]">3</button>
+                    <button class="btn btn-outline-secondary" type="button" id="cred_clave[4]">4</button>
+                    <button class="btn btn-outline-secondary" type="button" id="cred_clave[5]">5</button>
+                    <button class="btn btn-outline-secondary" type="button" id="cred_clave[6]">6</button>
+                    <button class="btn btn-outline-secondary" type="button" id="cred_clave[7]">7</button>
+                    <button class="btn btn-outline-secondary" type="button" id="cred_clave[8]">8</button>
+                    <button class="btn btn-outline-secondary" type="button" id="cred_clave[9]">9</button>
+                </div>
+                <input type="password" class="form-control ml-3" placeholder="Ingrese clave" id="cred_clave[]" required>
+            </div>
+
+            <div class="col-md-1 justify-content-center">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="cred_otros" value="otros" required>
+                    <label class="form-check-label" for="inlineCheckbox1">Otros</label>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <input type="text" class="form-control" id="cred_otros_descrip" placeholder="Otros . . . ">
+            </div>
+        </div>
+
+        <div class="row mb-4">
+
+            <div class="col-md-12">
+                <p>Destino del Crédito</p>
+                <div class="input-group">
+                    <input type="text" class="form-control col-md-4" id="cred_destino" placeholder="Indique cual será el destino de su credito"
+                        required>
+                    <p class="col-md-1"> </p>
+                    <input type="text" class="form-control col-md-7" id="cred_destino" placeholder="Indique cual será el destino de su credito"
+                        required>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- FIN Formulario DISPOSICION DEL IMPORTE DEL CREDITO -->
+
+    <!-- FOOTER -->
+    <footer class="container-fluid pt-4">
+        <div class="row">
+            <div class="col-md-10">
+                <p class="text-justify" style="font-size: 10px;">
+                    <strong>CONFORMIDAD SOLICITUD-CONTRATO.-</strong> Declaro bajo protesta de decir verdad, que actúo a nombre propio
+                    y no de terceros, y estar de acuerdo con lo siguiente:
+                    <strong>1)</strong> Los datos, información y demás documentos proporcionados por el suscrito(a) en los relativos
+                    a la presente solicitud son verdaderos y correctos, los cuales cumplen a cabalidad con las disposiciones
+                    legales aplicables en materia de Prevención del Lavado de Dinero y Financiamiento al Terrorismo, y que
+                    los recursos con que opero son de procedencia lícita y para fines lícitos, así mismo, autorizo en este
+                    acto a PRE15NA, S.A. DE C.V., SOFOM, E.N.R. a realizar las investigaciones y acciones que considere necesarias,
+                    a efecto de comprobar a través de cualquier tercero, dependencia u autoridad, la veracidad de los datos
+                    y en su caso, información biométrica de mi persona, que le fueron proporcionados;
+                    <strong> 2)</strong> De conformidad con el artículo 13 de las disposiciones de carácter general en materia de
+                    transparencia aplicables a SOFOMES ENR, fue hecho de mi conocimiento y a mi entera satisfacción, el contenido,
+                    alcance, términos y condiciones de la presente solicitud, carátula y el clausulado del Contrato de Adhesión
+                    Registrado ante CONDUSEF bajo Número de Registro:
+                    <strong>6108-439-021016/02-01899-0417</strong>, de acuerdo al producto solicitado.
+                    <strong>3)</strong> En caso de que esta solicitud sea aprobada, estoy de acuerdo en considerar como celebrado
+                    el Contrato de Adhesión, y estoy conforme y me obligo en todos y cada uno de los términos y condiciones
+                    asentados en el mismo, reconociendo además que éste último, la presente solicitud y carátula se encuentran
+                    relacionados entre sí, por lo que PRE15NA, S.A. DE C.V., SOFOM, E.N.R. me enviará el Contrato de Adhesión
+                    registrado, carátula y anexos, mediante correo electrónico proporcionado en la presente solicitud o en
+                    caso que no cuente con este, estarán a mi disposición en Sucursales de PRE15NA, S.A. DE C.V., SOFOM,
+                    E.N.R.
+                    <strong>4)</strong> Otorgo mi consentimiento expreso incluyendo los medios electrónicos, y la utilización de
+                    mis datos biométricos, incluyendo voz, huellas, reconocimiento facial u otros, a fin de que sean utilizados
+                    como medio de identificación y autenticación; así como, parte de las características de operación de
+                    los productos que ofrece PRE15NA, S.A. DE C.V., SOFOM, E.N.R. a través de los Medios Electrónicos.
+                </p>
+            </div>
+            <div class="col-md-2 bg-warning">
+                <div class="card bg-black">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center bg-dark">
+                            <p class="text-justify text-light text-center" style="font-size: 10px;">FIRME DENTRO DEL RECUADRO TAL CUAL APARECE EN SU IDENTIFICACIÓN
+                            </p>
+                        </li>
+                        <form class="form-row bg-warning">
+                            <div class="col">
+                                <textarea name="firma" id="firma" cols="30" rows="3"></textarea>
+                                <p class=" text-center font-weight-bold" style="font-size: 14px;">FIRMA SOLICITANTE</p>
+                            </div>
+                            <div class="col mb-2">
+                                <input type="date" class="form-control">
+                            </div>
+                        </form>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                <p class="text-justify" style="font-size: 10px;">
+                    Autorizaciones Adicionales. El SOLICITANTE, otorga su consentimiento para: (i) que PRE15NA, S.A. DE C.V., SOFOM, E.N.R. comparta
+                    y/o proporcione la información financiera, comercial, operativa y personal del SOLICITANTE, así como
+                    la relativa al Crédito y al Contrato; (ii) que su información pueda ser utilizada por PRE15NA, S.A. DE
+                    C.V., SOFOM, E.N.R. con fines mercadotécnicos y/o publicitarios; (iii) recibir en su domicilio particular
+                    y/o laboral, correos electrónicos personales y/o laborales, teléfonos fijos particulares y/o laborales,
+                    teléfonos móviles particulares y/o laborales o, por cualquier otro medio, publicidad de los bienes, productos
+                    y/o servicios financieros que ofrezca PRE15NA, S.A. DE C.V., SOFOM, E.N.R. El ofrecimiento de los bienes,
+                    productos y/o servicios financieros será realizado por PRE15NA, S.A. DE C.V., SOFOM, E.N.R., a través
+                    de publicidad, promoción o mercadeo telefónico. Esta autorización podrá ser revocada presentando un escrito
+                    en cualquiera de las sucursales de PRE15NA, S.A. DE C.V., SOFOM, E.N.R.
+                </p>
+            </div>
+
+            <div class="col-md-2 bg-warning">
+                <div class="card bg-black">
+                    <form class="form-row">
+                        <div class="col">
+                            <textarea name="firma" id="firma" cols="30" rows="2"></textarea>
+                            <p class=" text-center font-weight-bold" style="font-size: 14px;">FIRMA SOLICITANTE</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-dark mt-1">
+            <div class="col-md-12">
+                <blockquote class="blockquote">
+                    <p class="mb-0 text-light text-center">
+                        ÉSTE TRAMITE ES GRATUITO SI ALGUIEN LE SOLICITA ALGO A CAMBIO REPORTELO AL 01 (461) 6162147.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
